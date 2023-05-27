@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.8.2/angular.min.js"></script>
+  </head>
+  <body ng-app="yourApp">
+    <div ng-controller="myController2">
+      <p>In ra thong tin</p>
+      {{hello2}}
+    </div>
+    <div ng-controller="myController3">
+      <p>Hiển thị thông tin sinh viên</p>
+      Mã sinh vien : {{sinhVien.maSinhVien}} <br />
+      Họ tên : {{sinhVien.hoTen}} <br />
+      Địa chỉ : {{sinhVien.diaChi}}
+    </div>
+    <div ng-controller="myController4">
+      Số lần:{{count}}
+      <br />
+      <button ng-click="them()">Them</button>
+      <br />
+      <button ng-click="giam()">giam</button>
+    </div>
+    <script>
+      var app = angular.module("yourApp", []);
+
+      function func1($scope) {
+        $scope.hello = "Nguyen Van A";
+      }
+
+      function func2($scope) {
+        $scope.hello2 = "Nguyen Van B";
+      }
+      function func3($scope) {
+        $scope.sinhVien = {
+          maSinhVien: "PH123456",
+          hoTen: "Nguyen Van A",
+          diaChi: "Ha Noi",
+        };
+      }
+      function func4($scope) {
+        $scope.count = 0;
+        $scope.them = function () {
+          $scope.count++;
+        };
+
+        $scope.giam = function () {
+          $scope.count--;
+        };
+      }
+
+      app.controller("myController", func1);
+      app.controller("myController2", func2);
+      app.controller("myController3", func3);
+      app.controller("myController4", func4);
+    </script>
+  </body>
+</html>

@@ -1,0 +1,19 @@
+{
+  "nhanvien": [
+    {
+      "maNhanVien": "NV1",
+      "tenNhanVien": "Nguyen Van A",
+      "tuoi": 20
+    },
+    {
+      "maNhanVien": "NV1",
+      "tenNhanVien": "Nguyen Van A",
+      "tuoi": 20
+    },
+    {
+      "maNhanVien": "NV1",
+      "tenNhanVien": "Nguyen Van A",
+      "tuoi": 20
+    }
+  ]
+}
