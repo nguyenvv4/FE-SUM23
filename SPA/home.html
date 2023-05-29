@@ -1,1 +1,14 @@
-<p>Day la trang chu</p>
+<table class="table">
+  <thead>
+    <tr>
+      <td>ID</td>
+      <td>Ho Ten</td>
+    </tr>
+  </thead>
+  <tbody>
+    <tr ng-repeat="nhanVien in listNhanVien">
+      <td>{{nhanVien.id}}</td>
+      <td>{{nhanVien.hoTen}}</td>
+    </tr>
+  </tbody>
+</table>
