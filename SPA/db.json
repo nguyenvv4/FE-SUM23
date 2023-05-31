@@ -17,6 +17,12 @@
       "hoTen": "Nguyen Van A",
       "tuoi": 20,
       "diaChi": "Ha Noi"
+    },
+    {
+      "id": "123",
+      "hoTen": "123",
+      "tuoi": "123",
+      "diaChi": "123"
     }
   ]
 }

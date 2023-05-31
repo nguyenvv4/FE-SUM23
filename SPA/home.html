@@ -1,14 +1,41 @@
-<table class="table">
+<form class="container">
+  <div class="form-group">
+    <label for="exampleInputEmail1">Id</label>
+    <input type="text" class="form-control" ng-model="id" />
+  </div>
+  <div class="form-group">
+    <label for="exampleInputPassword1">Ho Ten</label>
+    <input type="text" class="form-control" ng-model="hoTen" />
+  </div>
+  <div class="form-group">
+    <label for="exampleInputPassword1">Tuoi</label>
+    <input type="text" class="form-control" ng-model="tuoi" />
+  </div>
+  <div class="form-group">
+    <label for="exampleInputPassword1">Dia chi</label>
+    <input type="text" class="form-control" ng-model="diaChi" />
+  </div>
+  <br />
+  <button type="submit" class="btn btn-primary" ng-click="addNhanVien()">
+    Them
+  </button>
+</form>
+
+<table class="table container">
   <thead>
     <tr>
       <td>ID</td>
       <td>Ho Ten</td>
+      <td>Tuoi</td>
+      <td>Dia Chi</td>
     </tr>
   </thead>
   <tbody>
     <tr ng-repeat="nhanVien in listNhanVien">
       <td>{{nhanVien.id}}</td>
       <td>{{nhanVien.hoTen}}</td>
+      <td>{{nhanVien.tuoi}}</td>
+      <td>{{nhanVien.diaChi}}</td>
     </tr>
   </tbody>
 </table>

@@ -3,7 +3,19 @@ window.nhanVienController = function ($scope, $http) {
   $http.get("http://localhost:3000/nhanVien").then(function (response) {
     $scope.listNhanVien = response.data;
   });
-};
-window.gioiThieu = function ($scope, $http) {
-  $scope.gioiThieu = "Day la trang giosi thieu";
+
+  $scope.addNhanVien = function () {
+    $http
+      .post("http://localhost:3000/nhanVien", {
+        id: $scope.id,
+        hoTen: $scope.hoTen,
+        tuoi: $scope.tuoi,
+        diaChi: $scope.diaChi,
+      })
+      .then(function (response) {
+        if (response.status === 200) {
+          alert("Them thanh cong");
+        }
+      });
+  };
 };
