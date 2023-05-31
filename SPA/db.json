@@ -1,12 +1,6 @@
 {
   "nhanVien": [
     {
-      "id": "NV1",
-      "hoTen": "Nguyen Van A",
-      "tuoi": 20,
-      "diaChi": "Ha Noi"
-    },
-    {
       "id": "NV2",
       "hoTen": "Nguyen Van A",
       "tuoi": 20,

@@ -13,8 +13,26 @@ window.nhanVienController = function ($scope, $http) {
         diaChi: $scope.diaChi,
       })
       .then(function (response) {
-        if (response.status === 200) {
+        if (response.status === 201) {
           alert("Them thanh cong");
+        }
+      });
+  };
+  $scope.detail = function (id) {
+    $http.get("http://localhost:3000/nhanVien/" + id).then(function (response) {
+      $scope.id = response.data.id;
+      $scope.hoTen = response.data.hoTen;
+      $scope.tuoi = response.data.tuoi;
+      $scope.diaChi = response.data.diaChi;
+    });
+  };
+
+  $scope.delete = function (id) {
+    $http
+      .delete("http://localhost:3000/nhanVien/" + id)
+      .then(function (response) {
+        if (response.status === 200) {
+          alert("Xoa thanh cong");
         }
       });
   };
