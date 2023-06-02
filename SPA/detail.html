@@ -23,32 +23,3 @@
     Update
   </button>
 </form>
-
-<table class="table container">
-  <thead>
-    <tr>
-      <td>ID</td>
-      <td>Ho Ten</td>
-      <td>Tuoi</td>
-      <td>Dia Chi</td>
-      <td>Action</td>
-    </tr>
-  </thead>
-  <tbody>
-    <tr ng-repeat="nhanVien in listNhanVien">
-      <td>{{nhanVien.id}}</td>
-      <td>{{nhanVien.hoTen}}</td>
-      <td>{{nhanVien.tuoi}}</td>
-      <td>{{nhanVien.diaChi}}</td>
-      <td>
-        <button class="btn btn-primary" ng-click="detail(nhanVien.id)">
-          Detail
-        </button>
-        <button class="btn btn-primary" ng-click="delete(nhanVien.id)">
-          Delete
-        </button>
-        <a href="#detail/{{nhanVien.id}}" class="btn btn-primary"> Chi Tiet</a>
-      </td>
-    </tr>
-  </tbody>
-</table>

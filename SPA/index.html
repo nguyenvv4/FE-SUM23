@@ -33,7 +33,10 @@
           .when("/gioithieu", {
             templateUrl: "gioithieu.html",
           })
-
+          .when("/detail/:id", {
+            templateUrl: "detail.html",
+            controller: detailController,
+          })
           .otherwise({
             redirectTo: "/home",
           });
