@@ -50,7 +50,7 @@ window.nhanVienController = function ($scope, $http) {
       });
   };
 };
-window.detailController = function ($scope, $http, $routeParams) {
+window.detailController = function ($scope, $http, $routeParams, $location) {
   var id = $routeParams.id;
   $http.get("http://localhost:3000/nhanVien/" + id).then(function (response) {
     $scope.id = response.data.id;
@@ -58,4 +58,18 @@ window.detailController = function ($scope, $http, $routeParams) {
     $scope.tuoi = response.data.tuoi;
     $scope.diaChi = response.data.diaChi;
   });
+  $scope.update = function () {
+    $http
+      .put("http://localhost:3000/nhanVien/" + id, {
+        hoTen: $scope.hoTen,
+        tuoi: $scope.tuoi,
+        diaChi: $scope.diaChi,
+      })
+      .then(function (response) {
+        if (response.status === 200) {
+          alert("update thanh cong");
+          $location.url("/home");
+        }
+      });
+  };
 };
